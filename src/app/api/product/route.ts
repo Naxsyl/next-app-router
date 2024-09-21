@@ -5,11 +5,15 @@ const data = [
     id: 1,
     name: "Product 1",
     price: 100,
+    image:
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/010e3aea-def2-4fd4-90b1-3cc6f95dbc1c/NIKE+REACTGATO.png",
   },
   {
     id: 2,
     name: "Product 2",
     price: 200,
+    image:
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/010e3aea-def2-4fd4-90b1-3cc6f95dbc1c/NIKE+REACTGATO.png",
   },
 ];
 
