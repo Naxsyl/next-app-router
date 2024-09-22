@@ -1,14 +1,16 @@
 type ProductPageProps = { params: { slug: string[] } };
 
 async function getData() {
-  // const res = await fetch("https://fakestoreapi.com/products");
-  const res = await fetch("http://localhost:3000/api/product", {
+  const res = await fetch("https://fakestoreapi.com/products", {
     cache: "no-store",
-    next: {
-      tags: ["product"],
-      // revalidate: 30
-    },
   });
+  // const res = await fetch("http://localhost:3000/api/product", {
+  //   cache: "no-store",
+  //   next: {
+  //     tags: ["product"],
+  //     // revalidate: 30
+  //   },
+  // });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -23,8 +25,8 @@ export default async function ProductPage(props: ProductPageProps) {
   return (
     <div className="grid grid-cols-4 mt-5 place-items-center">
       {/* <h1>{params.slug ? "Detail Product" : "List Product"}</h1> */}
-      {products.data.length > 0 &&
-        products.data.map((product: any) => (
+      {products.length > 0 &&
+        products.map((product: any) => (
           <div
             key={product.id}
             className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-5"
