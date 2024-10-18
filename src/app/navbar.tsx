@@ -4,7 +4,6 @@ import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const router = useRouter();
   const { data: session, status }: { data: any; status: string } = useSession();
   return (
     <nav className="flex bg-gray-800 py-2 px-5">
