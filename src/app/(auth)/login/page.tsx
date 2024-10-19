@@ -114,6 +114,14 @@ export default function Login({ searchParams }: any) {
           >
             {isLoading ? "Loading..." : "Login"}
           </button>
+          <hr />
+          <button
+            type="button"
+            onClick={() => signIn("google", { callbackUrl, redirect: false })}
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full"
+          >
+            Login with Google
+          </button>
         </form>
         {/* <!-- Sign up Link --> */}
         <div className="mt-6 text-blue-500 text-center">
