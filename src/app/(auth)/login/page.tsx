@@ -1,6 +1,7 @@
 "use client";
 
 import { signIn } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -51,10 +52,12 @@ export default function Login({ searchParams }: any) {
     <div className="bg-gray-100 flex justify-center items-center h-screen">
       {/* <!-- Left: Image --> */}
       <div className="w-1/2 h-screen hidden lg:block">
-        <img
+        <Image
           src="https://placehold.co/800x/667fff/ffffff.png?text=Your+Image&font=Montserrat"
           alt="Placeholder Image"
           className="object-cover w-full h-full"
+          width={800}
+          height={600}
         />
       </div>
       {/* <!-- Right: Login Form --> */}

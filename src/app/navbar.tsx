@@ -1,4 +1,5 @@
 import { signIn, signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -41,7 +42,14 @@ export default function Navbar() {
       </div>
       <div>
         {status === "authenticated" ? (
-          <div className="flex">
+          <div className="flex justify-center items-center">
+            <Image
+              src={"/images/profile.png"}
+              alt="profile"
+              width={100}
+              height={100}
+              className="w-10 h-10 rounded-full mr-3"
+            />
             <h4 className="text-white mr-3">{session?.user?.username}</h4>
             <button
               className="bg-white rounded-md px-3 text-sm h-7 cursor pointer"
